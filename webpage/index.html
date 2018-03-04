@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    </head>
+    <body>
+
+        <form action="http://dalek-test-bucket.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
+            Key to upload: 
+            <input type="input"  name="key" value="${filename}" /><br />
+            <input type="hidden" name="acl" value="public-read" />
+            <input type="hidden" name="success_action_redirect" value="http://dalek-test-bucket.s3.amazonaws.com/music_chords_in_the_key_of_a_b_c_d_e_f_g_flat_sharp_major.png" />
+            Content-Type: 
+            <input type="input"  name="Content-Type" value="image/jpeg" /><br />
+            <input type="hidden" name="x-amz-meta-uuid" value="14365123651274" /> 
+            <input type="hidden" name="x-amz-server-side-encryption" value="AES256" /> 
+            <input type="text"   name="X-Amz-Credential" value="AKIAJ7JPDZHKBEFZ6AEA/20180304/us-west-1/s3/aws4_request" />
+            <input type="text"   name="X-Amz-Algorithm" value="AWS4-HMAC-SHA256" />
+            <input type="text"   name="X-Amz-Date" value="20180304T140747Z" />
+
+            Tags for File: 
+            <input type="input"  name="x-amz-meta-tag" value="upload tag" /><br />
+            <input type="hidden" name="Policy" value='eyAiZXhwaXJhdGlvbiI6ICIyMDE4LTA1LTA1VDEyOjAwOjAwLjAwMFoiLA0KICAiY29uZGl0aW9ucyI6IFsNCiAgICB7ImJ1Y2tldCI6ICJkYWxlay10ZXN0LWJ1Y2tldCJ9LA0KICAgIHsiYWNsIjogInB1YmxpYy1yZWFkIn0sDQogICAgeyJzdWNjZXNzX2FjdGlvbl9yZWRpcmVjdCI6ICJodHRwOi8vZGFsZWstdGVzdC1idWNrZXQuczMuYW1hem9uYXdzLmNvbS9tdXNpY19jaG9yZHNfaW5fdGhlX2tleV9vZl9hX2JfY19kX2VfZl9nX2ZsYXRfc2hhcnBfbWFqb3IucG5nIn0sDQogICAgeyJ4LWFtei1tZXRhLXV1aWQiOiAiMTQzNjUxMjM2NTEyNzQifSwNCiAgICB7IngtYW16LXNlcnZlci1zaWRlLWVuY3J5cHRpb24iOiAiQUVTMjU2In0sDQoNCiAgICB7IngtYW16LWNyZWRlbnRpYWwiOiAiQUtJQUo3SlBEWkhLQkVGWjZBRUEvMjAxODAzMDQvdXMtd2VzdC0xL3MzL2F3czRfcmVxdWVzdCJ9LA0KICAgIHsieC1hbXotYWxnb3JpdGhtIjogIkFXUzQtSE1BQy1TSEEyNTYifSwNCiAgICB7IngtYW16LWRhdGUiOiAiMjAxODAzMDRUMTQwNzQ3WiIgfQ0KICBdDQp9' />
+            <input type="hidden" name="X-Amz-Signature" value="93c51f519d6d839e3c2de6722094e07c25ad55e6c963c4be9640632c5305af31" />
+            File: 
+            <input type="file"   name="file" /> <br />
+            <!-- The elements after this will be ignored -->
+            <input type="submit" name="submit" value="Upload to Amazon S3" />
+        </form>
+    </body>
+</html>
