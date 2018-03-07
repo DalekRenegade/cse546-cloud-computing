@@ -1,0 +1,16 @@
+{ "expiration": "<cse546-expiration>",
+  "conditions": [
+    {"bucket": "<cse546-bucket>"},
+    ["starts-with", "$key", "<cse546-key-name-conditions>"],
+    {"acl": "public-read"},
+    {"success_action_redirect": "<cse546-redirect-url>"},
+    ["starts-with", "$Content-Type", "image/"],
+    {"x-amz-meta-uuid": "14365123651274"},
+    {"x-amz-server-side-encryption": "AES256"},
+    ["starts-with", "$x-amz-meta-tag", ""],
+
+    {"x-amz-credential": "<cse546-amz-credential>"},
+    {"x-amz-algorithm": "<cse546-amz-algorithm>"},
+    {"x-amz-date": "<cse546-amz-date>" }
+  ]
+}
