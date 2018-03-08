@@ -9,21 +9,21 @@
 
         <form action="http://dalek-test-bucket.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
             Key to upload: 
-            <input type="input"  name="key" value="${filename}" /><br />
+            <input type="input"  name="key" value="uploads/${filename}" /><br />
             <input type="hidden" name="acl" value="public-read" />
-            <input type="hidden" name="success_action_redirect" value="http://dalek-test-bucket.s3.amazonaws.com/music_chords_in_the_key_of_a_b_c_d_e_f_g_flat_sharp_major.png" />
+            <input type="hidden" name="success_action_redirect" value="https://s3-us-west-1.amazonaws.com/dalek-test-bucket/music_chords_in_the_key_of_a_b_c_d_e_f_g_flat_sharp_major.png" />
             Content-Type: 
             <input type="input"  name="Content-Type" value="image/jpeg" /><br />
             <input type="hidden" name="x-amz-meta-uuid" value="14365123651274" /> 
             <input type="hidden" name="x-amz-server-side-encryption" value="AES256" /> 
-            <input type="text"   name="X-Amz-Credential" value="AKIAJ7JPDZHKBEFZ6AEA/20180307/us-west-1/s3/aws4_request" />
+            <input type="text"   name="X-Amz-Credential" value="AKIAJ7JPDZHKBEFZ6AEA/20180308/us-west-1/s3/aws4_request" />
             <input type="text"   name="X-Amz-Algorithm" value="AWS4-HMAC-SHA256" />
-            <input type="text"   name="X-Amz-Date" value="20180304T140747Z" />
+            <input type="text"   name="X-Amz-Date" value="20180308T000000Z" />
 
             Tags for File: 
-            <input type="input"  name="x-amz-meta-tag" value="upload tag" /><br />
-            <input type="hidden" name="Policy" value='eyAiZXhwaXJhdGlvbiI6ICIyMDE4LTA1LTA1VDAwOjAwOjAwLjAwMFoiLAogICJjb25kaXRpb25zIjogWwogICAgeyJidWNrZXQiOiAiZGFsZWstdGVzdC1idWNrZXQifSwKICAgIFsic3RhcnRzLXdpdGgiLCAiJGtleSIsICIvIl0sCiAgICB7ImFjbCI6ICJwdWJsaWMtcmVhZCJ9LAogICAgeyJzdWNjZXNzX2FjdGlvbl9yZWRpcmVjdCI6ICJodHRwczovL3MzLXVzLXdlc3QtMS5hbWF6b25hd3MuY29tL2RhbGVrLXRlc3QtYnVja2V0L211c2ljX2Nob3Jkc19pbl90aGVfa2V5X29mX2FfYl9jX2RfZV9mX2dfZmxhdF9zaGFycF9tYWpvci5wbmcifSwKICAgIFsic3RhcnRzLXdpdGgiLCAiJENvbnRlbnQtVHlwZSIsICJpbWFnZS8iXSwKICAgIHsieC1hbXotbWV0YS11dWlkIjogIjE0MzY1MTIzNjUxMjc0In0sCiAgICB7IngtYW16LXNlcnZlci1zaWRlLWVuY3J5cHRpb24iOiAiQUVTMjU2In0sCiAgICBbInN0YXJ0cy13aXRoIiwgIiR4LWFtei1tZXRhLXRhZyIsICIiXSwKCiAgICB7IngtYW16LWNyZWRlbnRpYWwiOiAiQUtJQUo3SlBEWkhLQkVGWjZBRUEvMjAxODAzMDcvdXMtZWFzdC0xL3MzL2F3czRfcmVxdWVzdCJ9LAogICAgeyJ4LWFtei1hbGdvcml0aG0iOiAiQVdTNC1ITUFDLVNIQTI1NiJ9LAogICAgeyJ4LWFtei1kYXRlIjogIjIwMTgwMzA3VDAwMDAwMFoiIH0KICBdCn0' />
-            <input type="hidden" name="X-Amz-Signature" value="d4699c11e9c64ee619594ce74942a05d009dbb6055190dd362eecce2f7636080" />
+            <input type="input"  name="x-amz-meta-tag" value="" /><br />
+            <input type="hidden" name="Policy" value='eyAiZXhwaXJhdGlvbiI6ICIyMDE4LTA1LTA1VDAwOjAwOjAwLjAwMFoiLA0KICAiY29uZGl0aW9ucyI6IFsNCiAgICB7ImJ1Y2tldCI6ICJkYWxlay10ZXN0LWJ1Y2tldCJ9LA0KICAgIFsic3RhcnRzLXdpdGgiLCAiJGtleSIsICJ1cGxvYWRzLyJdLA0KICAgIHsiYWNsIjogInB1YmxpYy1yZWFkIn0sDQogICAgeyJzdWNjZXNzX2FjdGlvbl9yZWRpcmVjdCI6ICJodHRwczovL3MzLXVzLXdlc3QtMS5hbWF6b25hd3MuY29tL2RhbGVrLXRlc3QtYnVja2V0L211c2ljX2Nob3Jkc19pbl90aGVfa2V5X29mX2FfYl9jX2RfZV9mX2dfZmxhdF9zaGFycF9tYWpvci5wbmcifSwNCiAgICBbInN0YXJ0cy13aXRoIiwgIiRDb250ZW50LVR5cGUiLCAiaW1hZ2UvIl0sDQogICAgeyJ4LWFtei1tZXRhLXV1aWQiOiAiMTQzNjUxMjM2NTEyNzQifSwNCiAgICB7IngtYW16LXNlcnZlci1zaWRlLWVuY3J5cHRpb24iOiAiQUVTMjU2In0sDQogICAgWyJzdGFydHMtd2l0aCIsICIkeC1hbXotbWV0YS10YWciLCAiIl0sDQoNCiAgICB7IngtYW16LWNyZWRlbnRpYWwiOiAiQUtJQUo3SlBEWkhLQkVGWjZBRUEvMjAxODAzMDgvdXMtd2VzdC0xL3MzL2F3czRfcmVxdWVzdCJ9LA0KICAgIHsieC1hbXotYWxnb3JpdGhtIjogIkFXUzQtSE1BQy1TSEEyNTYifSwNCiAgICB7IngtYW16LWRhdGUiOiAiMjAxODAzMDhUMDAwMDAwWiIgfQ0KICBdDQp9' />
+            <input type="hidden" name="X-Amz-Signature" value="e3fe5b1792bbacb0f72990713c97c64e3e5dbcfd5920e476b203ebec6e45ca54" />
             File: 
             <input type="file"   name="file" /> <br />
             <!-- The elements after this will be ignored -->

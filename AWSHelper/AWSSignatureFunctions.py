@@ -20,8 +20,6 @@ def getencodedpolicy(expiration, bucket, key_name_starts_with, redirect, credent
     policy = ''
     if len(key_name_starts_with) == 0:
         keynamestartswith = '/'
-    elif not key_name_starts_with[0] == '/':
-        keynamestartswith = '/'
     try:
         with open("POSTPolicyTemplate.json", "r") as myfile:
             policy_str = myfile.read()
@@ -29,7 +27,8 @@ def getencodedpolicy(expiration, bucket, key_name_starts_with, redirect, credent
                 .replace('<cse546-key-name-conditions>', key_name_starts_with).replace('<cse546-redirect-url>', redirect)\
                 .replace('<cse546-amz-credential>', credential).replace('<cse546-amz-algorithm>', algorithm)\
                 .replace('<cse546-amz-date>', amz_date)
-            policy = base64.b64encode(bytes(policy_str.encode('utf-8')))
+            print policy_str
+            policy = base64.b64encode(policy_str)
     except Exception as e:
         print 'ERROR : ', e.message
         policy = ''
