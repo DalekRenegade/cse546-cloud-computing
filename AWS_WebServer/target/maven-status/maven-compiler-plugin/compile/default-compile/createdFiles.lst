@@ -1,0 +1,7 @@
+com/amazonaws/samples/Cse546Project1Main.class
+com/amazonaws/samples/RequestController.class
+com/amazonaws/samples/Logging.class
+com/amazonaws/samples/RequestResult.class
+com/amazonaws/samples/LogType.class
+com/amazonaws/samples/CloudImageRecognition.class
+com/amazonaws/samples/CloudImageRecognition$MyHttpHandler.class
